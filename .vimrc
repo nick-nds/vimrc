@@ -7,6 +7,9 @@ call vundle#begin()
 "alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+
 "let Vundle manage Vundle, required
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 "Plugin 'groenewege/vim-less' "scss syntax helper
@@ -38,6 +41,8 @@ nmap <Leader>gd <Plug>(coc-definition)
 nmap <Leader>gr <Plug>(coc-references)
 nnoremap <C-p> :GFiles<CR>
 
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Formatting selected code.
 xmap <Leader>f  <Plug>(coc-format-selected)
@@ -58,7 +63,7 @@ function! s:check_back_space() abort
 endfunction
 
 
-set number
+set number relativenumber
 syntax on                  " Enable syntax highlighting.
 filetype plugin indent on  " Enable file type based indentation.
 noremap <Up> <Nop>
