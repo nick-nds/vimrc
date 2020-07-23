@@ -12,6 +12,8 @@ Plugin 'vim-airline/vim-airline'
 
 "let Vundle manage Vundle, required
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+"Plugin 'neoclide/coc-css'
+Plugin 'lilydjwg/colorizer'
 "Plugin 'groenewege/vim-less' "scss syntax helper
 Plugin 'nathanaelkane/vim-indent-guides' "Show indent guides
 "Plugin 'nick-nds/vim-gutentags' "Managing Tag Files
@@ -25,6 +27,7 @@ Plugin 'tmhedberg/SimpylFold'
 "Plugin 'jnurmine/Zenburn'  "Colour Theme
 Plugin 'morhetz/gruvbox'
 "Plugin 'ap/vim-css-color'
+"Plugin 'skammer/vim-css-color'
 Plugin 'DougBeney/pickachu' 
 Plugin 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
@@ -32,6 +35,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 let g:indent_guides_enable_on_vim_startup = 1 "Enable indent guides by default
+
 
 "colors zenburn "Load Zenburn
 colorscheme gruvbox
